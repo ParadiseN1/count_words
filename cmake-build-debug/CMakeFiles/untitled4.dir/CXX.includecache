@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/sv/CLionProjects/untitled4/main.cpp
+/Users/sv/ucu/Semester 1/cpp/count_words/main.cpp
 iostream
 -
 string
@@ -27,32 +27,34 @@ unordered_map
 -
 thread
 -
+numeric
+-
 src/lib_archive.h
-/Users/sv/CLionProjects/untitled4/src/lib_archive.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive.h
 src/word_count.h
-/Users/sv/CLionProjects/untitled4/src/word_count.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.h
 src/queue_t.h
-/Users/sv/CLionProjects/untitled4/src/queue_t.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/queue_t.h
 src/indexed_file.h
-/Users/sv/CLionProjects/untitled4/src/indexed_file.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/indexed_file.h
 src/time.h
-/Users/sv/CLionProjects/untitled4/src/time.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/time.h
 
-/Users/sv/CLionProjects/untitled4/src/indexed_file.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/indexed_file.h
 
-/Users/sv/CLionProjects/untitled4/src/lib_archive.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive.h
 iostream
 -
 
-/Users/sv/CLionProjects/untitled4/src/queue_t.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/queue_t.h
 mutex
 -
 queue
 -
 
-/Users/sv/CLionProjects/untitled4/src/time.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/time.h
 
-/Users/sv/CLionProjects/untitled4/src/word_count.h
+/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.h
 boost/algorithm/string.hpp
 -
 cctype

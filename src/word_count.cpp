@@ -6,7 +6,6 @@
 
 std::unordered_map<std::string, u_int> stringToMap(std::string const& text, std::unordered_map<std::string, u_int> *res)
 {
-    std::mutex mu;
     std::unordered_map<std::string, u_int> word_map;
     std::locale::global(boost::locale::generator().generate("en_US.UTF-8"));
     const char* kWhiteSpace = " ,.!?;\n\t\r()[]{}123567890-_=+`~\'\"\\/<>:@#$%^&*|";    //whatever you call white space
@@ -17,9 +16,7 @@ std::unordered_map<std::string, u_int> stringToMap(std::string const& text, std:
         word_map[token] += 1;
         token = std::strtok(nullptr, kWhiteSpace);
     }
-    mu.lock();
     res = &word_map;
-    mu.unlock();
     return word_map;
 }
 

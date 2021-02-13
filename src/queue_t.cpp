@@ -11,9 +11,8 @@ void queue_t<T>::push(T &&elem){
 
 template<class T>
 bool queue_t<T>::pop(T& elem){
-    if (queue.empty())
-        return false;
-    std::lock_guard<std::mutex> lock(mutex);
+    std::unique_lock<std::mutex> lk(mutex);
+    cv.wait(lk, [] { return !empty(); });
     elem = queue.front();
     queue.pop();
     return true;

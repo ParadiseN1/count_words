@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sv/CLionProjects/untitled4
+CMAKE_SOURCE_DIR = "/Users/sv/ucu/Semester 1/cpp/count_words"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sv/CLionProjects/untitled4/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/untitled4.dir/depend.make
@@ -79,42 +79,42 @@ include CMakeFiles/untitled4.dir/flags.make
 
 CMakeFiles/untitled4.dir/main.cpp.o: CMakeFiles/untitled4.dir/flags.make
 CMakeFiles/untitled4.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled4.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/main.cpp.o -c /Users/sv/CLionProjects/untitled4/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled4.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/main.cpp.o -c "/Users/sv/ucu/Semester 1/cpp/count_words/main.cpp"
 
 CMakeFiles/untitled4.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled4.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sv/CLionProjects/untitled4/main.cpp > CMakeFiles/untitled4.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/sv/ucu/Semester 1/cpp/count_words/main.cpp" > CMakeFiles/untitled4.dir/main.cpp.i
 
 CMakeFiles/untitled4.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sv/CLionProjects/untitled4/main.cpp -o CMakeFiles/untitled4.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sv/ucu/Semester 1/cpp/count_words/main.cpp" -o CMakeFiles/untitled4.dir/main.cpp.s
 
 CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o: CMakeFiles/untitled4.dir/flags.make
 CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o: ../src/lib_archive_archive.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o -c /Users/sv/CLionProjects/untitled4/src/lib_archive_archive.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o -c "/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive_archive.cpp"
 
 CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sv/CLionProjects/untitled4/src/lib_archive_archive.cpp > CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive_archive.cpp" > CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.i
 
 CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sv/CLionProjects/untitled4/src/lib_archive_archive.cpp -o CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive_archive.cpp" -o CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.s
 
 CMakeFiles/untitled4.dir/src/word_count.cpp.o: CMakeFiles/untitled4.dir/flags.make
 CMakeFiles/untitled4.dir/src/word_count.cpp.o: ../src/word_count.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled4.dir/src/word_count.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/src/word_count.cpp.o -c /Users/sv/CLionProjects/untitled4/src/word_count.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled4.dir/src/word_count.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled4.dir/src/word_count.cpp.o -c "/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.cpp"
 
 CMakeFiles/untitled4.dir/src/word_count.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled4.dir/src/word_count.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sv/CLionProjects/untitled4/src/word_count.cpp > CMakeFiles/untitled4.dir/src/word_count.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.cpp" > CMakeFiles/untitled4.dir/src/word_count.cpp.i
 
 CMakeFiles/untitled4.dir/src/word_count.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled4.dir/src/word_count.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sv/CLionProjects/untitled4/src/word_count.cpp -o CMakeFiles/untitled4.dir/src/word_count.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.cpp" -o CMakeFiles/untitled4.dir/src/word_count.cpp.s
 
 # Object files for target untitled4
 untitled4_OBJECTS = \
@@ -135,7 +135,7 @@ untitled4: /usr/local/lib/libboost_system-mt.dylib
 untitled4: /usr/local/lib/libboost_chrono-mt.dylib
 untitled4: /usr/local/lib/libboost_thread-mt.dylib
 untitled4: CMakeFiles/untitled4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable untitled4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable untitled4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -148,6 +148,6 @@ CMakeFiles/untitled4.dir/clean:
 .PHONY : CMakeFiles/untitled4.dir/clean
 
 CMakeFiles/untitled4.dir/depend:
-	cd /Users/sv/CLionProjects/untitled4/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/sv/CLionProjects/untitled4 /Users/sv/CLionProjects/untitled4 /Users/sv/CLionProjects/untitled4/cmake-build-debug /Users/sv/CLionProjects/untitled4/cmake-build-debug /Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/untitled4.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/sv/ucu/Semester 1/cpp/count_words" "/Users/sv/ucu/Semester 1/cpp/count_words" "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug" "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug" "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/untitled4.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/untitled4.dir/depend
 

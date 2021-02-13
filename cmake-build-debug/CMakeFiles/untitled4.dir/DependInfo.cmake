@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/sv/CLionProjects/untitled4/main.cpp" "/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/untitled4.dir/main.cpp.o"
-  "/Users/sv/CLionProjects/untitled4/src/lib_archive_archive.cpp" "/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o"
-  "/Users/sv/CLionProjects/untitled4/src/word_count.cpp" "/Users/sv/CLionProjects/untitled4/cmake-build-debug/CMakeFiles/untitled4.dir/src/word_count.cpp.o"
+  "/Users/sv/ucu/Semester 1/cpp/count_words/main.cpp" "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/untitled4.dir/main.cpp.o"
+  "/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive_archive.cpp" "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o"
+  "/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.cpp" "/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/untitled4.dir/src/word_count.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -8,6 +8,7 @@
 #include <map>
 #include <unordered_map>
 #include <thread>
+#include <numeric>
 
 #include "src/lib_archive.h"
 #include "src/word_count.h"
@@ -32,54 +33,80 @@ void calc_thread(std::vector<std::unordered_map<std::string, u_int>> *files_word
 {
     std::cout << "Thread {" << thread_idx << "} is alive." << std::endl;
     while(!readEnd || !file_content_queue.empty()) {
-        std::unique_lock<std::mutex> lk(mu);
+        //std::unique_lock<std::mutex> lk(mu); //// replace CV to queue
         std::cout << "Thread {" << thread_idx << "} start waiting." << "readEnd:" << readEnd << ", queue.empty():" << file_content_queue.empty() << std::endl;
-        cv.wait(lk, [] { return !file_content_queue.empty(); });
+        //cv.wait(lk, [] { return !file_content_queue.empty(); });
 
         indexed_file queueObj;
         std::unordered_map<std::string, u_int> word_map;
         file_content_queue.pop(queueObj);
 
+        //// Try unclock() mutex HERE
+        //lk.unlock();
         std::cout << "{" << thread_idx << "}[" << queueObj.idx << "]Calc thread Begin...  " << "readEnd:" << readEnd << ", queue.empty():" << file_content_queue.empty() <<  std::endl;
 //      std::cout << "idx:" << queueObj.idx << "/" << q_idx << "|" << files_words.size() << std::endl;
         (*files_words)[queueObj.idx] = stringToMap(queueObj.str, &word_map);
         std::cout << "{" << thread_idx << "}[" << queueObj.idx << "]Calc thread Finish..." << "readEnd:" << readEnd << ", queue.empty():" << file_content_queue.empty() << std::endl;
-        if (!file_content_queue.empty())
-            cv.notify_all();
-        else
-            break;
     }
     std::cout << "Thread {" << thread_idx << "} is dead." << std::endl;
 }
 
-void read_thread(std::vector<std::string> &&archive_filenames){
+void read_thread(std::vector<std::string> &&archive_filenames, std::vector<std::unordered_map<std::string, u_int>> *vec){
     u_int q_idx = 0;
     for (const auto& fn: archive_filenames) {
         LibArchiveArchive archive = LibArchiveArchive();
         std::cout << "[" << q_idx << "]Read thread..." << fn << std::endl;
         archive.init(fn);
+//        auto file_name = archive.getFileName();
         while (archive.nextFile()) {
             size_t entry_size = archive.getFileSize();
             if (entry_size > MAX_ARCHIVE_SIZE) {
                 std::cout << "archive entry is too large, skip it" << std::endl;
                 continue;
             }
+            if (archive.getFileName().compare(archive.getFileName().size()-3, 3, "txt") != 0)
+                continue;
             indexed_file file;
             file.idx = q_idx;
+            std::cout<< "/" << q_idx << "\\" << archive.getFileName() << std::endl;
             file.str = std::string(entry_size, char{});
             archive.readNextFile(file.str);
             file_content_queue.push(std::move(file));
-            cv.notify_all();
-        }
-        ++q_idx;
-        if (q_idx == archive_filenames.size()){
-            readEnd = true;
+//            cv.notify_one();
+            if (q_idx >= vec->size())
+                vec->resize(vec->size() * 2);
+            ++q_idx;
         }
     }
+    readEnd = true;
+    std::cout << "FILES COUNT:" << q_idx << std::endl;
 }
+//
+//void merge_pair(std::vector<std::unordered_map<std::string, u_int>> *first, std::vector<std::unordered_map<std::string, u_int>> *second){
+//
+//    first = std::accumulate( second->begin(), second->end(), first,
+//                             []( auto &m, auto &p )
+//                             {
+//                                 return ( m[p.first] +=p.second, m );
+//                             } );
+//}
+//
+//void merge_vec(std::vector<std::unordered_map<std::string, u_int>> *vec_map){
+//    for (int i = 0; i < vec_map->size() -1; ++i){
+//        merge_pair(&vec_map[vec_map->size()], &vec_map[i]);
+//    }
+//}
+
+
 
 void merge(std::vector<std::unordered_map<std::string, u_int>> *files_words){
-
+    std::thread merge_threads[n_merge_threads];
+    for (int i = 0;i < n_merge_threads; ++i){
+//        merge_threads[i] = std::thread()
+    }
+    for (int i = 0;i < n_merge_threads; ++i){
+        merge_threads[i].join();
+    }
 }
 
 std::vector<std::string> file_names(std::string path){
@@ -115,7 +142,7 @@ int main() {
         calc_threads[i] = std::thread(calc_thread, &files_words, i);
     }
 
-    std::thread readThread{read_thread, std::move(archive_filenames)};
+    std::thread readThread{read_thread, std::move(archive_filenames), &files_words};
     std::unordered_map<std::string, u_int> word_map;
     ////queue to MAP:
     readThread.join();
@@ -130,7 +157,7 @@ int main() {
 
     auto time_to_calculate = get_current_time_fenced() - before;
     std::cout << "Time: " << to_s(time_to_calculate) << "s" << std::endl;
-
+    std::cout << files_words.size() << std::endl;
 //    std::cout << "queue is empty!" << std::endl;
 //    for (auto & files_word : files_words){
 //        sortMap(files_word, 1);
