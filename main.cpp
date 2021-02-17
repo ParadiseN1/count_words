@@ -14,7 +14,6 @@
 #include "src/lib_archive.h"
 #include "src/word_count.h"
 #include "src/queue_t.h"
-#include "src/indexed_file.h"
 #include "src/time.h"
 
 struct indexed_file{
