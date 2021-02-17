@@ -28,7 +28,7 @@ public:
         return true;
     }
 
-    u_int size(){
+    size_t size(){
         return queue.size();
     }
 

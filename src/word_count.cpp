@@ -4,9 +4,9 @@
 
 #include "word_count.h"
 
-std::unordered_map<std::string, u_int> stringToMap(std::string const& text, std::unordered_map<std::string, u_int> *res)
+std::unordered_map<std::string, size_t> stringToMap(std::string const& text, std::unordered_map<std::string, size_t> *res)
 {
-    std::unordered_map<std::string, u_int> word_map;
+    std::unordered_map<std::string, size_t> word_map;
     std::locale::global(boost::locale::generator().generate("en_US.UTF-8"));
     const char* kWhiteSpace = " ,.!?;\n\t\r()[]{}123567890-_=+`~\'\"\\/<>:@#$%^&*|";    //whatever you call white space
     boost::locale::normalize(text);
@@ -20,7 +20,7 @@ std::unordered_map<std::string, u_int> stringToMap(std::string const& text, std:
     return word_map;
 }
 
-void printMap(std::unordered_map<std::string, u_int> const& word_map)
+void printMap(std::unordered_map<std::string, size_t> const& word_map)
 {
     for (auto const& [key, val] : word_map)
     {
@@ -31,7 +31,7 @@ void printMap(std::unordered_map<std::string, u_int> const& word_map)
     }
 }
 
-void printVecMap(std::vector<std::pair<std::string, u_int>> const& word_map, int first_n = -1)
+void printVecMap(std::vector<std::pair<std::string, size_t>> const& word_map, int first_n = -1)
 {
     for (auto const& [key, val] : word_map)
     {
@@ -46,16 +46,16 @@ void printVecMap(std::vector<std::pair<std::string, u_int>> const& word_map, int
     }
 }
 
-bool sortByVal(const std::pair<std::string, u_int> &a,
-               const std::pair<std::string, u_int> &b)
+bool sortByVal(const std::pair<std::string, size_t> &a,
+               const std::pair<std::string, size_t> &b)
 {
     if (a.second == b.second)
         return (a.first < b.first);
     return (a.second > b.second);
 }
 
-void sortMap(std::unordered_map<std::string, u_int> const& word_map, int first_n){
-    std::vector<std::pair<std::string, u_int>> vec;
+void sortMap(std::unordered_map<std::string, size_t> const& word_map, int first_n){
+    std::vector<std::pair<std::string, size_t>> vec;
 
     // copy key-value pairs from the map to the vector
     auto it2 = word_map.begin();
