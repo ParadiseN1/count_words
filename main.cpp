@@ -95,9 +95,13 @@ void merge_thread(queue_t<std::unordered_map<std::string, size_t>> *merge_queue,
     while(true){
         std::cout << "{" << i << "}" << " Starts!\n";
         std::cout << "Merge queue size:" << merge_queue->size() << std::endl;
+        mu->lock();
         std::cout << "Working threads:" << *working_threads << std::endl;
-        if (*working_threads == 1 && merge_queue->size() == 1)
+        if (*working_threads == 1 && merge_queue->size() == 1) {
+            mu->unlock();
             break;
+        }
+        mu->unlock();
         if (merge_queue->empty())
             break;
         std::unordered_map<std::string, size_t> first_to_merge;
@@ -166,7 +170,7 @@ int main() {
     std::vector<std::string> archive_filenames;
 
     archive_filenames = file_names(test_data_folder);
-    archive_filenames = std::vector(archive_filenames.begin(), archive_filenames.begin() + 15);
+//    archive_filenames = std::vector(archive_filenames.begin(), archive_filenames.begin() + 15);
     std::cout << "number of archives: " << archive_filenames.size() << std::endl;
     std::cout << "First archive: " << archive_filenames[0] << std::endl;
     std::cout << "Last archive: " << archive_filenames[archive_filenames.size()-1] << std::endl;
