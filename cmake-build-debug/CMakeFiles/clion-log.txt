@@ -1,19 +1,31 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/sv/ucu/Semester 1/cpp/count_words"
--- The C compiler identification is AppleClang 12.0.0.12000032
--- The CXX compiler identification is AppleClang 12.0.0.12000032
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
--- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found Boost: /usr/local/lib/cmake/Boost-1.75.0/BoostConfig.cmake (found version "1.75.0") found components: filesystem locale system 
+D:\WorkComp\msys2_64_2015\mingw64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Temp\Students\Temp\1\count_words
+CMake Warning at D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1204 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1326 (_Boost_COMPONENT_DEPENDENCIES)
+  D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1935 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:9 (find_package)
+
+
+CMake Warning at D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1204 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1326 (_Boost_COMPONENT_DEPENDENCIES)
+  D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1935 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:9 (find_package)
+
+
+CMake Warning at D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1204 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1326 (_Boost_COMPONENT_DEPENDENCIES)
+  D:/WorkComp/msys2_64_2015/mingw64/share/cmake-3.19/Modules/FindBoost.cmake:1935 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:9 (find_package)
+
+
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug
+-- Build files have been written to: D:/Temp/Students/Temp/1/count_words/cmake-build-debug

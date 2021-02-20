@@ -1,3 +1,4 @@
-ToolSet: 1.0 (local)Options: 
+ToolSet: w64 9.0 (local)@D:\WorkComp\msys2_64_2015\mingw64
+Options: 
 
 Options:

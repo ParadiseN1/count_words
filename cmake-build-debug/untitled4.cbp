@@ -5,224 +5,112 @@
 		<Option title="untitled4"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.75.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.75.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_thread-1.75.0\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug"/>
+				<Option working_dir="D:/Temp/Students/Temp/1/count_words/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug"/>
+				<Option working_dir="D:/Temp/Students/Temp/1/count_words/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug"/>
+				<Option working_dir="D:/Temp/Students/Temp/1/count_words/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled4">
-				<Option output="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug"/>
+				<Option output="D:/Temp/Students/Temp/1/count_words/cmake-build-debug/untitled4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Temp/Students/Temp/1/count_words/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DBOOST_ALL_NO_LIB"/>
-					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_LOCALE_DYN_LINK"/>
-					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
-					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_THREAD_DYN_LINK"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4"/>
+					<CompileFile command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled4/fast">
-				<Option output="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/untitled4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug"/>
+				<Option output="D:/Temp/Students/Temp/1/count_words/cmake-build-debug/untitled4.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Temp/Students/Temp/1/count_words/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DBOOST_ALL_NO_LIB"/>
-					<Add option="-DBOOST_FILESYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_LOCALE_DYN_LINK"/>
-					<Add option="-DBOOST_CHRONO_DYN_LINK"/>
-					<Add option="-DBOOST_SYSTEM_DYN_LINK"/>
-					<Add option="-DBOOST_THREAD_DYN_LINK"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="D:/WorkComp/msys2_64_2015/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sv/ucu/Semester\ 1/cpp/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled4/fast"/>
+					<CompileFile command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/WorkComp/msys2_64_2015/mingw64/bin/mingw32-make.exe -f &quot;D:/Temp/Students/Temp/1/count_words/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/libArchive/archive.h">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/libArchive/archive.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/libArchive/archive_entry.h">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/libArchive/archive_entry.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/main.cpp">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/main.cpp">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/indexed_file.h">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/src/lib_archive.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive.h">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/src/lib_archive_archive.cpp">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/lib_archive_archive.cpp">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/src/queue_t.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/queue_t.h">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/src/time.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/time.h">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/src/word_count.cpp">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.cpp">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/src/word_count.h">
 			<Option target="untitled4"/>
 		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/src/word_count.h">
-			<Option target="untitled4"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/CMakeLists.txt">
+		<Unit filename="D:/Temp/Students/Temp/1/count_words/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/BoostDetectToolset-1.75.0.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/Boost-1.75.0/BoostConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/Boost-1.75.0/BoostConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_headers-1.75.0/boost_headers-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_headers-1.75.0/boost_headers-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_filesystem-1.75.0/boost_filesystem-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_filesystem-1.75.0/boost_filesystem-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_filesystem-1.75.0/libboost_filesystem-variant-mt-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_filesystem-1.75.0/libboost_filesystem-variant-mt-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_filesystem-1.75.0/libboost_filesystem-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_filesystem-1.75.0/libboost_filesystem-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_filesystem-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_locale-1.75.0/boost_locale-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_locale-1.75.0/boost_locale-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_locale-1.75.0/libboost_locale-variant-mt-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_locale-1.75.0/libboost_locale-variant-mt-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_locale-1.75.0/libboost_locale-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_locale-1.75.0/libboost_locale-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_locale-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_chrono-1.75.0/boost_chrono-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_chrono-1.75.0/boost_chrono-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_chrono-1.75.0/libboost_chrono-variant-mt-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_chrono-1.75.0/libboost_chrono-variant-mt-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_chrono-1.75.0/libboost_chrono-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_chrono-1.75.0/libboost_chrono-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_chrono-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_system-1.75.0/boost_system-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_system-1.75.0/boost_system-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_system-1.75.0/libboost_system-variant-mt-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_system-1.75.0/libboost_system-variant-mt-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_system-1.75.0/libboost_system-variant-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_system-1.75.0/libboost_system-variant-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_system-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_thread-1.75.0/boost_thread-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_thread-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_thread-1.75.0/boost_thread-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_thread-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_thread-1.75.0/libboost_thread-variant-mt-shared.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_thread-1.75.0\"/>
-		</Unit>
-		<Unit filename="/Users/sv/ucu/Semester 1/cpp/count_words/../../../../../../usr/local/lib/cmake/boost_thread-1.75.0/libboost_thread-variant-mt-static.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_thread-1.75.0\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
