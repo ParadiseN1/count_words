@@ -3,6 +3,7 @@
 //
 #include <mutex>
 #include <queue>
+#include <condition_variable>
 
 #ifndef UNTITLED4_QUEUE_T_H
 #define UNTITLED4_QUEUE_T_H

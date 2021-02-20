@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <queue>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <boost/locale.hpp>
 #include <boost/version.hpp>
 #include <map>
@@ -128,7 +128,7 @@ std::vector<std::string> file_names(std::string path){
     std::vector<std::string> archive_filenames;
     for (const auto& entry: fs::recursive_directory_iterator(path)) {
         if ((entry.path().extension() == ".ZIP") || (entry.path().extension() == ".zip")) {
-            archive_filenames.push_back(entry.path());
+            archive_filenames.push_back(entry.path().string());
         }
     }
 
@@ -179,9 +179,10 @@ int main() {
     std::vector<std::unordered_map<std::string, size_t>> files_words(archive_filenames.size());
     //// 3. Calculate words dictionaries for every file. (parallel)
     queue_t<std::unordered_map<std::string, size_t>> merge_queue;
-    std::thread calc_threads[n_calc_threads];
+    std::vector<std::thread> calc_threads;
+    // std::thread calc_threads[n_calc_threads]; GCC only! Nonstandard!
     for(int i = 0; i < n_calc_threads; ++i) {
-        calc_threads[i] = std::thread(calc_thread, &files_words, i, &merge_queue);
+        calc_threads.emplace_back(calc_thread, &files_words, i, &merge_queue); // Fixed rather unstylish wording.
     }
 
     std::thread readThread{read_thread, std::move(archive_filenames), &files_words};
@@ -192,14 +193,14 @@ int main() {
         calc_threads[i].join();
     }
     std::cout << "ALL THREADS FINISHED!!!\n";
-    std::thread merge_threads[n_merge_threads];
+    std::vector<std::thread> merge_threads; // [n_merge_threads]; !non-standard, gcc only
 
     std::cout << "Merge queue size:" << merge_queue.size() << std::endl;
 
     int threads_left = n_merge_threads;
     std::mutex mu;
     for (int i =0; i < n_merge_threads; ++i) {
-        merge_threads[i] = std::thread(merge_thread, &merge_queue, i, &threads_left, &mu);
+        merge_threads.emplace_back(merge_thread, &merge_queue, i, &threads_left, &mu);
     }
 
     for (int i =0; i < n_merge_threads; ++i) {

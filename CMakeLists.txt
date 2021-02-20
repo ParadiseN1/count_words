@@ -16,9 +16,10 @@ add_executable(untitled4 main.cpp
         libArchive/archive.h
         libArchive/archive_entry.h
         src/word_count.cpp
-        src/word_count.h src/queue_t.h src/indexed_file.h src/time.h)
+        src/word_count.h src/queue_t.h src/time.h)
 
-target_link_libraries(untitled4 ${Boost_LIBRARIES})
+target_include_directories(untitled4 PRIVATE ${Boost_INCLUDE_DIRS} ${LibArchive_INCLUDE_DIRS})
 
-target_link_libraries(untitled4 archive)
+target_link_libraries(untitled4 ${Boost_LIBRARIES}  ${LibArchive_LIBRARIES} )
+
 
