@@ -8,7 +8,8 @@ set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)
 find_package(Boost REQUIRED COMPONENTS filesystem locale system)
 
-find_library(LIBARCHIVE libarchive libArchive)
+#find_library(LIBARCHIVE libarchive libArchive)
+find_package(LibArchive REQUIRED)
 
 add_executable(untitled4 main.cpp
         src/lib_archive_archive.cpp
