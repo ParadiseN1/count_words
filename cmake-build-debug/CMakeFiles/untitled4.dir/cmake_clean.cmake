@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled4.dir/main.cpp.obj"
-  "CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.obj"
-  "CMakeFiles/untitled4.dir/src/word_count.cpp.obj"
-  "libuntitled4.dll.a"
-  "untitled4.exe"
-  "untitled4.exe.manifest"
+  "CMakeFiles/untitled4.dir/main.cpp.o"
+  "CMakeFiles/untitled4.dir/src/lib_archive_archive.cpp.o"
+  "CMakeFiles/untitled4.dir/src/word_count.cpp.o"
+  "untitled4"
   "untitled4.pdb"
 )
 

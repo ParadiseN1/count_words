@@ -30,9 +30,11 @@ bool LibArchiveArchive::nextFile() {
     return (archive_read_next_header(arc, &entry) == ARCHIVE_OK);
 }
 
-void LibArchiveArchive::readNextFile(std::string &file_content) {
-    archive_read_data(arc, &file_content[0], file_content.size());
+void LibArchiveArchive::readNextFile(void *file_content_pt, size_t size) {
+//    archive_read_data(arc, &file_content[0], file_content.size());
+    archive_read_data(arc, file_content_pt, size);
 }
+
 
 LibArchiveArchive::LibArchiveArchive(){
     arc = archive_read_new();

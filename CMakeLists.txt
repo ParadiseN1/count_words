@@ -9,7 +9,7 @@ set(Boost_USE_MULTITHREADED ON)
 find_package(Boost REQUIRED COMPONENTS filesystem locale system)
 
 #find_library(LIBARCHIVE libarchive libArchive)
-find_package(LibArchive REQUIRED)
+#find_package(LibArchive REQUIRED)
 
 add_executable(untitled4 main.cpp
         src/lib_archive_archive.cpp
@@ -19,8 +19,8 @@ add_executable(untitled4 main.cpp
         src/word_count.cpp
         src/word_count.h src/queue_t.h src/time.h)
 
-target_include_directories(untitled4 PRIVATE ${Boost_INCLUDE_DIRS} ${LibArchive_INCLUDE_DIRS})
+target_link_libraries(untitled4 ${Boost_LIBRARIES})
 
-target_link_libraries(untitled4 ${Boost_LIBRARIES}  ${LibArchive_LIBRARIES} )
+target_link_libraries(untitled4 archive)
 
 

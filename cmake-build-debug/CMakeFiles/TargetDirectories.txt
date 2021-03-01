@@ -1,3 +1,3 @@
-D:/Temp/Students/Temp/1/count_words/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/Temp/Students/Temp/1/count_words/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Temp/Students/Temp/1/count_words/cmake-build-debug/CMakeFiles/untitled4.dir
+/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sv/ucu/Semester 1/cpp/count_words/cmake-build-debug/CMakeFiles/untitled4.dir

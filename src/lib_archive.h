@@ -20,7 +20,7 @@ public:
     uint64_t getFileSize();
     std::string getFileName();
     bool nextFile();
-    void readNextFile(std::string &file_content);
+    void readNextFile(void *file_content_pt, size_t size);
 
     LibArchiveArchive();
     ~LibArchiveArchive();
