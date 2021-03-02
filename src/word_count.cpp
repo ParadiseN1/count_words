@@ -6,20 +6,16 @@
 
 #include "word_count.h"
 
-std::unordered_map<std::string, size_t> text_to_vocabulary(std::string&& str, std::unordered_map<std::string, size_t> *res) {
-    boost::locale::generator gen;
-    std::locale::global(gen("en_US.UTF-8"));
-
-
+std::unordered_map<std::string, size_t> text_to_vocabulary(std::string&& str) {
+    std::unordered_map<std::string, size_t> word_map;
     str = boost::locale::normalize(str);
     str = boost::locale::fold_case(str);
-    std::unordered_map<std::string, size_t> word_map;
     boost::locale::boundary::ssegment_index map(boost::locale::boundary::word, str.begin(), str.end());
     map.rule(boost::locale::boundary::word_letters);
     for(auto split_itr = map.begin(), e = map.end(); split_itr != e; ++split_itr) {
-        ++(*res)[split_itr->str()];
+        ++word_map[split_itr->str()];
     }
-    return *res;
+    return word_map;
 }
 
 std::unordered_map<std::string, size_t> stringToMap(std::string const& text, std::unordered_map<std::string, size_t> *res)
@@ -107,7 +103,7 @@ void sortMap(std::unordered_map<std::string, size_t> & word_map, int first_n){
 
     // copy key-value pairs from the map to the vector
     auto it2 = word_map.begin();
-    for (; it2!=word_map.end(); it2++)
+    for (; it2!=word_map.end(); ++it2)
     {
         vec.emplace_back(make_pair(it2->first, it2->second));
     }

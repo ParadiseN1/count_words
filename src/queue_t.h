@@ -16,25 +16,26 @@ private:
 public:
     void push(T &&elem){
         std::lock_guard<std::mutex> lock(mutex);
-        cv.notify_one();
         queue.push(std::move(elem));
+        cv.notify_one(); //! Push then notify!
     }
 
     bool pop(T& elem){
         std::unique_lock<std::mutex> lk(mutex);
-        while (empty())
+        while (queue.empty()) //! Відповідни метод queue_t має захоплювати м'ютекс, тому тут не можна використати.
             cv.wait(lk);
-        elem = queue.front();
+        elem = std::move(queue.front());
         queue.pop();
         return true;
     }
 
     size_t size(){
-        std::unique_lock<std::mutex> lk(mutex);
+        std::lock_guard<std::mutex> lk(mutex);
         return queue.size();
     }
 
     bool empty(){
+        std::lock_guard<std::mutex> lk(mutex);
         return queue.empty();
     }
 };

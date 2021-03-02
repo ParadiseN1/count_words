@@ -25,5 +25,6 @@ public:
     LibArchiveArchive();
     ~LibArchiveArchive();
 
+    LibArchiveArchive(const LibArchiveArchive& ) = delete; // Forbid copy constructor -- it captures several errors.
 };
 #endif //UNTITLED4_LIB_ARCHIVE_H

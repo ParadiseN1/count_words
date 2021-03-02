@@ -1,10 +1,13 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
 #include <queue>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <boost/locale.hpp>
 #include <boost/version.hpp>
 #include <map>
@@ -33,26 +36,23 @@ size_t n_merge_threads = 20;
 bool readEnd = false;
 bool calcEnd = false;
 
-void calc_thread(std::vector<std::unordered_map<std::string, size_t>> *files_words, int thread_idx, queue_t<std::unordered_map<std::string, size_t>> *merge_queue)
+void calc_thread(int thread_idx, queue_t<std::unordered_map<std::string, size_t>> *merge_queue)
 {
     std::cout << "Thread {" << thread_idx << "} is alive." << std::endl;
     while(!readEnd || !file_content_queue.empty()) {
-
         indexed_file queueObj;
-        std::unordered_map<std::string, size_t> word_map;
         file_content_queue.pop(queueObj);
 
         std::cout << "stringToMap()\n";
-        (*files_words)[queueObj.idx] = text_to_vocabulary(std::move(queueObj.str), &word_map);
-        merge_queue->push(std::move((*files_words)[queueObj.idx]));
+        merge_queue->push(text_to_vocabulary(std::move(queueObj.str)));
     } // Terminating with uncaught exception of type std::bad_cast: std::bad_cast
     std::cout << "Thread {" << thread_idx << "} is dead." << std::endl;
 }
 
-void read_thread(std::vector<std::string> &&archive_filenames, std::vector<std::unordered_map<std::string, size_t>> *vec){
+void read_thread(std::vector<std::string> &&archive_filenames){
     size_t q_idx = 0;
     for (const auto& fn: archive_filenames) {
-        LibArchiveArchive archive = LibArchiveArchive();
+        LibArchiveArchive archive{};
 //        std::cout << "[" << q_idx << "]Read thread..." << fn << std::endl;
         archive.init(fn);
         while (archive.nextFile()) {
@@ -69,8 +69,6 @@ void read_thread(std::vector<std::string> &&archive_filenames, std::vector<std::
             file.str = std::string(entry_size, char{});
             archive.readNextFile(&file.str[0], entry_size);
             file_content_queue.push(std::move(file));
-            if (q_idx >= vec->size())
-                vec->resize(vec->size() * 2);
             ++q_idx;
         }
     }
@@ -78,32 +76,16 @@ void read_thread(std::vector<std::string> &&archive_filenames, std::vector<std::
     std::cout << "FILES COUNT:" << q_idx << std::endl;
 }
 
-void merge_pair(std::unordered_map<std::string, size_t> &&first,
-                std::unordered_map<std::string, size_t> &&second,
-                queue_t<std::unordered_map<std::string, size_t>> *merge_queue){
-    first = std::accumulate( second.begin(), second.end(), first,
-                             []( auto &m, auto &p )
-                             {
-                                 return ( m[p.first] +=p.second, m );
-                             });
-    merge_queue->push(std::move(first));
-}// WTF RUNS 100 TIMES SLOWER!!!!!!!!!!!!
-
-void merge_pair1(std::unordered_map<std::string, size_t> &&first,
-                 std::unordered_map<std::string, size_t> &&second,
+void merge_pair1(std::unordered_map<std::string, size_t> &first,
+                 const std::unordered_map<std::string, size_t> &second,
                  queue_t<std::unordered_map<std::string, size_t>> *merge_queue){
-    for (auto& [word, count] : second) {
-        auto it = first.find(word);
-        if (it != first.end()) {
+    for (const auto& [word, count] : second) {
             first[word] += count;
-        } else {
-            first[word] = count;
-        }
     }
     merge_queue->push(std::move(first));
 }
 
-void merge_thread(queue_t<std::unordered_map<std::string, size_t>> *merge_queue, int i, int *working_threads, std::mutex *mu){
+void merge_thread(queue_t<std::unordered_map<std::string, size_t>> *merge_queue, int i, size_t *working_threads, std::mutex *mu){
     while(true){
         std::cout << "{" << i << "}" << " Starts!\n";
         std::cout << "Merge queue size:" << merge_queue->size() << std::endl;
@@ -127,8 +109,7 @@ void merge_thread(queue_t<std::unordered_map<std::string, size_t>> *merge_queue,
         std::cout << "{" << i << "}" << " pop2;\n";
         merge_queue->pop(second_to_merge);
         std::cout << "{" << i << "}" << " merge;\n";
-        merge_pair1(std::move(first_to_merge), std::move(second_to_merge), merge_queue);
-
+        merge_pair1(first_to_merge, second_to_merge, merge_queue);
     }
     mu->lock();
     --(*working_threads);
@@ -136,11 +117,13 @@ void merge_thread(queue_t<std::unordered_map<std::string, size_t>> *merge_queue,
     std::cout << "Thread {" << i << "} is dead." << std::endl;
 }
 
-std::vector<std::string> file_names(std::string path){
+std::vector<std::string> file_names(const std::string& path){
+    using namespace std::literals::string_literals; //! This is OK!
     std::vector<std::string> archive_filenames;
     for (const auto& entry: fs::recursive_directory_iterator(path)) {
-        if ((entry.path().extension() == ".ZIP") || (entry.path().extension() == ".zip")) {
-            archive_filenames.push_back(entry.path());
+        auto ext = entry.path().extension().string();
+        if (( ext == ".ZIP"s ) || ( ext == ".zip"s )) {
+            archive_filenames.push_back(entry.path().string());
         }
     }
 
@@ -149,15 +132,11 @@ std::vector<std::string> file_names(std::string path){
 
 void sort(std::unordered_map<std::string, size_t>& M)
 {
-    std::vector<std::pair<std::string, int> > A;
-
-    for (auto& it : M) {
-        A.emplace_back(it);
-    }
+    std::vector<std::pair<std::string, int> > A{M.begin(), M.end()}; //! Навіщо в циклі? :-)
 
     using pairtype=std::pair<std::string,size_t>;
     sort(A.begin(), A.end(),
-         [](pairtype a, pairtype b){
+         [](const auto& a, const auto& b){ //! Ага, ще тут всі скопіюємо... Поставив const ref.
                     return a.second < b.second;
             }
         );
@@ -174,47 +153,52 @@ std::pair<KeyType,ValueType> get_max( const std::unordered_map<KeyType,ValueType
 }
 
 int main() {
+    //! This code is not reentrant! Do not use concurrently.
+    boost::locale::generator gen;
+    std::locale::global(gen("en_US.UTF-8"));
+
     std::string test_data_folder = "../test";
-    std::string full_data_folder = "../data";
+    //std::string full_data_folder = "../data";
     auto before = get_current_time_fenced();
 
     //// 1. Get archive filenames, and their number. (not parallel)
     std::vector<std::string> archive_filenames;
 
-    archive_filenames = file_names(full_data_folder);
+    archive_filenames = file_names(test_data_folder);
 //    archive_filenames = std::vector(archive_filenames.begin(), archive_filenames.begin() + 15);
     std::cout << "number of archives: " << archive_filenames.size() << std::endl;
     std::cout << "First archive: " << archive_filenames[0] << std::endl;
     std::cout << "Last archive: " << archive_filenames[archive_filenames.size()-1] << std::endl;
 
     //// 2. Create an vector of words dictionaries, which size if the number of files. (not parallel)
-    std::vector<std::unordered_map<std::string, size_t>> files_words(archive_filenames.size());
+    // std::vector<std::unordered_map<std::string, size_t>> files_words(archive_filenames.size());
     //// 3. Calculate words dictionaries for every file. (parallel)
     queue_t<std::unordered_map<std::string, size_t>> merge_queue;
-    std::thread calc_threads[n_calc_threads];
-    for(int i = 0; i < n_calc_threads; ++i) {
-        calc_threads[i] = std::thread(calc_thread, &files_words, i, &merge_queue);
+    std::vector<std::thread> calc_threads;
+    // std::thread calc_threads[n_calc_threads]; GCC only! Nonstandard!
+    for(size_t i = 0; i < n_calc_threads; ++i) {
+        calc_threads.emplace_back(calc_thread, i, &merge_queue); // Fixed rather unstylish wording.
     }
 
-    std::thread readThread{read_thread, std::move(archive_filenames), &files_words};
-    std::unordered_map<std::string, size_t> word_map;
+    std::thread readThread{read_thread, std::move(archive_filenames)}; //! Це варто раніше починати.
+    //std::unordered_map<std::string, size_t> word_map;
     ////queue to MAP:
     readThread.join();
-    for(int i = 0; i < n_calc_threads; ++i) {
+    for(size_t i = 0; i < n_calc_threads; ++i) {
         calc_threads[i].join();
     }
     std::cout << "ALL THREADS FINISHED!!!\n";
-    std::thread merge_threads[n_merge_threads];
+    std::vector<std::thread> merge_threads; // [n_merge_threads]; !non-standard, gcc only
 
     std::cout << "Merge queue size:" << merge_queue.size() << std::endl;
 
-    int threads_left = n_merge_threads;
+    size_t threads_left = n_merge_threads;
     std::mutex mu;
-    for (int i =0; i < n_merge_threads; ++i) {
-        merge_threads[i] = std::thread(merge_thread, &merge_queue, i, &threads_left, &mu);
+    for (size_t i = 0; i < n_merge_threads; ++i) {
+        merge_threads.emplace_back(merge_thread, &merge_queue, i, &threads_left, &mu);
     }
 
-    for (int i =0; i < n_merge_threads; ++i) {
+    for (size_t i = 0; i < n_merge_threads; ++i) {
         merge_threads[i].join();
     }
 
